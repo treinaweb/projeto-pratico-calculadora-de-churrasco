@@ -25,44 +25,44 @@
 
     <main>
         <div class="container">
-            <h1 class="tituli-principal">Calculadora de Churrasco</h1>
+            <h1 class="titulo-principal">Calculadora de Churrasco</h1>
             <form name="camposFormulario">
                 <p>Insira  quantas pessoas irão no churrasco</p>
                 <input type="number" name="convidados" id="convidados">
 
 
-                <section class="comida">
-                    <h2>Carnes</h2>
-                    <div class="campo-form">
-                        <label for="bovina">Bovina</label>
-                        <input type="text" name="bovina" id="bovina" placeholder="Valor do Kg">
-                    </div>
-                    <div class="campo-form">
-                        <label for="frango">Frango</label>
-                        <input type="text" name="frango" id="frango" placeholder="Valor do Kg">
-                    </div>
-                    <div class="campo-form">
-                        <label for="suina">Suina</label>
-                        <input type="text" name="suina" id="suina" placeholder="Valor do Kg">
-                    </div>
-                </section>
-
-
-                <section class="bebida">
-                    <h2>Bebidas</h2>
-                    <div class="campo-form">
-                        <label for="refri">Refrigerante (Por Litro)</label>
-                        <input type="text" name="refri" id="refri" placeholder="Valor por Litro">
-                    </div>
-                    <div class="campo-form">
-                        <label for="cerveja">Cerveja(Lata 355ml)</label>
-                        <input type="text" name="cerveja" id="cerveja" placeholder="Valor por unidade">
-                    </div>
-                    <div class="campo-form">
-                        <label for="quantidadePessoasBebemCerveja">N. de pessoas de bebem cerveja</label>
-                        <input type="number" name="quantidadePessoasBebemCerveja" id="quantidadePessoasBebemCerveja" placeholder="Número de pessoas">
-                    </div>
-                </section>
+                <div class="blocos-editaveis">
+                    <section class="comida">
+                        <h2>Carnes</h2>
+                        <div class="campo-form">
+                            <label for="bovina">Bovina</label>
+                            <input type="text" name="bovina" id="bovina" placeholder="Valor do Kg">
+                        </div>
+                        <div class="campo-form">
+                            <label for="frango">Frango</label>
+                            <input type="text" name="frango" id="frango" placeholder="Valor do Kg">
+                        </div>
+                        <div class="campo-form">
+                            <label for="suina">Suina</label>
+                            <input type="text" name="suina" id="suina" placeholder="Valor do Kg">
+                        </div>
+                    </section>
+                    <section class="bebida">
+                        <h2>Bebidas</h2>
+                        <div class="campo-form">
+                            <label for="refri">Refrigerante (Por Litro)</label>
+                            <input type="text" name="refri" id="refri" placeholder="Valor por Litro">
+                        </div>
+                        <div class="campo-form">
+                            <label for="cerveja">Cerveja(Lata 355ml)</label>
+                            <input type="text" name="cerveja" id="cerveja" placeholder="Valor por unidade">
+                        </div>
+                        <div class="campo-form">
+                            <label for="quantidadePessoasBebemCerveja">N. de pessoas de bebem cerveja</label>
+                            <input type="number" name="quantidadePessoasBebemCerveja" id="quantidadePessoasBebemCerveja" placeholder="Número de pessoas">
+                        </div>
+                    </section>
+                </div>
 
 
                 <button type="submit" class="btn-calcular" id="calcular">
