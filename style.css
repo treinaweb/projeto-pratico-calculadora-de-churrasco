@@ -26,3 +26,38 @@ main {
     padding: 0 15px;
     margin-inline: auto;
 }
+
+/* Header */
+.header {
+    background-color: var(--purple-dark);
+    padding: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: var(--purple-dark);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+}
