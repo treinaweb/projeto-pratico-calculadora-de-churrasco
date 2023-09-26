@@ -1,10 +1,22 @@
-function calcularBebida(){}
+function calcularBebida({
+    quantidadeConvidados,
+    quantidadePessoasBebemCerveja,
+}) {
+   
+}
 
-function quantidade(){}
+function quantidade(quantidadeConvidados, quantidadePessoasBebemCerveja) {
+    let refri, cerveja;
 
-function valor(){}
+    refri = (quantidadeConvidados - quantidadePessoasBebemCerveja) * 1;
 
-function total(){}
+    cerveja = (quantidadePessoasBebemCerveja * 1.45) / 0.355;
 
+    return { refri, cerveja };
+}
 
-export { calcularBebida }
+function valor() {}
+
+function total() {}
+
+export { calcularBebida };
