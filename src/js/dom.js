@@ -2,4 +2,6 @@ function obterFormulario(){
     return document.forms.camposFormulario
 }
 
-export {obterFormulario}
+function mostrarBebida(bebida){}
+
+export {obterFormulario, mostrarBebida}
