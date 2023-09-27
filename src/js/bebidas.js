@@ -4,8 +4,9 @@ function calcularBebida({
     valorRefri,
     valorCerveja
 }) {
-   let quantidadeBebida = quantidade(quantidadeConvidados, quantidadePessoasBebemCerveja)
-   return valor(quantidadeBebida, valorRefri, valorCerveja)
+   let quantidadeBebida = quantidade(quantidadeConvidados, quantidadePessoasBebemCerveja);
+   let valorBebida = valor(quantidadeBebida, valorRefri, valorCerveja)
+   return total(valorBebida)
 }
 
 function quantidade(quantidadeConvidados, quantidadePessoasBebemCerveja) {
@@ -28,6 +29,10 @@ function valor(quantidades, valorRefri, valorCerveja) {
     return { refri, cerveja }
 }
 
-function total() {}
+function total(valores) {
+    let valor = valores.refri + valores.cerveja;
+
+    return { valor }
+}
 
 export { calcularBebida };
