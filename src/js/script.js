@@ -23,7 +23,8 @@ function comida() {
         valorFrango: informacoesDeEntrada.frango.value,
         valorSuina: informacoesDeEntrada.suina.value,
     };
-    console.log(calcularComida(valores));
+    let valoresComidaCalculado = calcularComida(valores);
+    mostrarComida(valoresComidaCalculado);
 }
 
 informacoesDeEntrada.addEventListener("submit", (event) => {

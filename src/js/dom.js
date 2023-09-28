@@ -13,4 +13,6 @@ function mostrarBebida(bebida) {
     inserirQuantidades('qtd-cerveja', bebida.quantidades.cerveja.toFixed(0), 'Latas(355ml)')
 }
 
+function mostrarComida(comida){}
+
 export { obterFormulario, mostrarBebida };

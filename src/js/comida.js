@@ -15,7 +15,17 @@ function calcularComida({
         valorFrango,
         valorSuina
     );
-    return total(quantidadesComida, valoresComida);
+    return {
+        quantidades: {
+            ...quantidadesComida
+        },
+        valores: {
+            ...valoresComida
+        },
+        totais: {
+            ...total(quantidadesComida, valoresComida)
+        }
+    }
 }
 
 function quantidade(convidados) {
