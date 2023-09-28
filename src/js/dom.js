@@ -13,6 +13,16 @@ function mostrarBebida(bebida) {
     inserirQuantidades('qtd-cerveja', bebida.quantidades.cerveja.toFixed(0), 'Latas(355ml)')
 }
 
-function mostrarComida(comida){}
+function mostrarComida(comida){
+    inserirValores('valor-bovina', comida.valores.bovina);
+    inserirValores('valor-frango', comida.valores.frango);
+    inserirValores('valor-suina', comida.valores.suina);
+    inserirValores('valor-total-comida', comida.totais.valor);
 
-export { obterFormulario, mostrarBebida };
+    inserirQuantidades('qtd-bovina', comida.quantidades.bovina.toFixed(3), 'g')
+    inserirQuantidades('qtd-frango', comida.quantidades.frango.toFixed(3), 'g')
+    inserirQuantidades('qtd-suina', comida.quantidades.suina.toFixed(3), 'g')
+    inserirQuantidades('qtd-total-comida', comida.totais.quantidadeTotal.toFixed(3), 'g')
+}
+
+export { obterFormulario, mostrarBebida, mostrarComida };

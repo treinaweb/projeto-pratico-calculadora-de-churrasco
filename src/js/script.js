@@ -1,6 +1,6 @@
 import { calcularBebida } from "./bebidas.js";
 import { calcularComida } from "./comida.js";
-import { obterFormulario, mostrarBebida } from "./dom.js";
+import { obterFormulario, mostrarBebida, mostrarComida } from "./dom.js";
 
 const informacoesDeEntrada = obterFormulario();
 
