@@ -1,4 +1,5 @@
 import { calcularBebida } from "./bebidas.js";
+import { calcularComida } from "./comida.js";
 import { obterFormulario, mostrarBebida } from "./dom.js";
 
 const informacoesDeEntrada = obterFormulario();
@@ -15,7 +16,15 @@ function bebida() {
     mostrarBebida(valoresBebidaCalculado);
 }
 
+function comida(){
+    let valores = {
+        quantidadeConvidados: informacoesDeEntrada.convidados.value
+    }
+    console.log(calcularComida(valores))
+}
+
 informacoesDeEntrada.addEventListener("submit", (event) => {
     event.preventDefault();
     bebida();
+    comida();
 });
