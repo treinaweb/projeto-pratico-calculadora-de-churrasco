@@ -16,11 +16,14 @@ function bebida() {
     mostrarBebida(valoresBebidaCalculado);
 }
 
-function comida(){
+function comida() {
     let valores = {
-        quantidadeConvidados: informacoesDeEntrada.convidados.value
-    }
-    console.log(calcularComida(valores))
+        quantidadeConvidados: informacoesDeEntrada.convidados.value,
+        valorBovina: informacoesDeEntrada.bovina.value,
+        valorFrango: informacoesDeEntrada.frango.value,
+        valorSuina: informacoesDeEntrada.suina.value,
+    };
+    console.log(calcularComida(valores));
 }
 
 informacoesDeEntrada.addEventListener("submit", (event) => {
