@@ -9,8 +9,13 @@ function calcularComida({
     valorSuina,
 }) {
     let quantidadesComida = quantidade(quantidadeConvidados);
-    let valoresComida = valor(quantidadesComida, valorBovina, valorFrango, valorSuina)
-    return valoresComida;
+    let valoresComida = valor(
+        quantidadesComida,
+        valorBovina,
+        valorFrango,
+        valorSuina
+    );
+    return total(quantidadesComida, valoresComida);
 }
 
 function quantidade(convidados) {
@@ -33,6 +38,16 @@ function valor(quantidadesComida, valorBovina, valorFrango, valorSuina) {
     return { bovina, frango, suina };
 }
 
-function total() {}
+function total(quantidadesComida, valoresComida) {
+    let valor =
+        valoresComida.bovina + valoresComida.frango + valoresComida.suina;
+
+    let quantidadeTotal =
+        quantidadesComida.bovina +
+        quantidadesComida.frango +
+        quantidadesComida.suina;
+
+    return { valor, quantidadeTotal };
+}
 
 export { calcularComida };
