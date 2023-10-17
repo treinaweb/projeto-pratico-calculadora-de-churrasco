@@ -1,3 +1,5 @@
+import { stringParaFloat } from "./helpers.js";
+
 function calcularBebida({
     quantidadeConvidados,
     quantidadePessoasBebemCerveja,
@@ -33,9 +35,9 @@ function quantidade(quantidadeConvidados, quantidadePessoasBebemCerveja) {
 function valor(quantidades, valorRefri, valorCerveja) {
     let refri, cerveja;
 
-    refri = quantidades.refri * valorRefri;
+    refri = quantidades.refri * stringParaFloat(valorRefri);
 
-    cerveja = quantidades.cerveja * valorCerveja;
+    cerveja = quantidades.cerveja * stringParaFloat(valorCerveja);
 
     return { refri, cerveja };
 }

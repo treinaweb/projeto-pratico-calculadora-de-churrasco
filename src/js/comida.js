@@ -1,3 +1,5 @@
+import { stringParaFloat } from "./helpers.js";
+
 let multiplicadorBovina = 0.2;
 let multiplicadorFrango = 0.1;
 let multiplicadorSuina = 0.1;
@@ -17,15 +19,15 @@ function calcularComida({
     );
     return {
         quantidades: {
-            ...quantidadesComida
+            ...quantidadesComida,
         },
         valores: {
-            ...valoresComida
+            ...valoresComida,
         },
         totais: {
-            ...total(quantidadesComida, valoresComida)
-        }
-    }
+            ...total(quantidadesComida, valoresComida),
+        },
+    };
 }
 
 function quantidade(convidados) {
@@ -41,9 +43,9 @@ function quantidade(convidados) {
 function valor(quantidadesComida, valorBovina, valorFrango, valorSuina) {
     let bovina, frango, suina;
 
-    bovina = quantidadesComida.bovina * valorBovina;
-    frango = quantidadesComida.frango * valorFrango;
-    suina = quantidadesComida.suina * valorSuina;
+    bovina = quantidadesComida.bovina * stringParaFloat(valorBovina);
+    frango = quantidadesComida.frango * stringParaFloat(valorFrango);
+    suina = quantidadesComida.suina * stringParaFloat(valorSuina);
 
     return { bovina, frango, suina };
 }
