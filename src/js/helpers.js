@@ -3,11 +3,18 @@ function obterElementoId(nomeCampo) {
 }
 
 function inserirValores(elemento, valor) {
+    if (isNaN(valor) || valor == 0) {
+        return (obterElementoId(elemento).innerText = "--");
+    }
+
     return (obterElementoId(elemento).innerText = `${converterMoeda(valor)}`);
 }
 
 function inserirQuantidades(elemento, valor, unidade = "") {
-    obterElementoId(elemento).innerText = `${valor}${unidade}`;
+    if (valor == 0) {
+        return (obterElementoId(elemento).innerText = "--");
+    }
+    return (obterElementoId(elemento).innerText = `${valor}${unidade}`);
 }
 
 function converterMoeda(valor) {
