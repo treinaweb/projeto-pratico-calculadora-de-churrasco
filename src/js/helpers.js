@@ -35,4 +35,4 @@ function stringParaFloat(input) {
     return valorAlterado;
 }
 
-export { inserirValores, inserirQuantidades, stringParaFloat };
+export { inserirValores, inserirQuantidades, stringParaFloat, obterElementoId };

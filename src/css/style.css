@@ -119,6 +119,11 @@ input:focus {
 
 
 /* Área dos resultados */
+#resultado {
+    height: 0;
+    overflow: hidden;
+}
+
 .resultado-section {
     margin: 50px 0;
     background-color: #fff;
