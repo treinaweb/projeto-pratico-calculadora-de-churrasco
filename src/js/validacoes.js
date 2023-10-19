@@ -48,6 +48,7 @@ function validacoesCampos(informacoesDeEntrada) {
         informacoesDeEntrada.quantidadePessoasBebemCerveja,
         informacoesDeEntrada.convidados
     );
+    verificarQuantidadeConvidados(informacoesDeEntrada.convidados);
 }
 
 function verificarNumeroDePessoasBebem(pessoasBebem, convidados) {
@@ -59,6 +60,18 @@ function verificarNumeroDePessoasBebem(pessoasBebem, convidados) {
             return;
         }
         pessoasBebem.setCustomValidity("");
+    });
+}
+
+function verificarQuantidadeConvidados(convidados) {
+    convidados.addEventListener("input", () => {
+        if (parseInt(convidados.value) < 2) {
+            convidados.setCustomValidity(
+                "Você precisa ter mais de uma pessoa para fazer o churrasco"
+            );
+            return;
+        }
+        convidados.setCustomValidity("");
     });
 }
 
